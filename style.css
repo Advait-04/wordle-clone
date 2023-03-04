@@ -15,10 +15,6 @@ input {
     font-size: xx-large;
     border: 1px #a4a4a4 solid;
 
-    pointer-events: none;
-}
-
-.in1 {
     pointer-events: all;
 }
 
