@@ -44,7 +44,8 @@ function game(evt) {
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
 
-    console.log(evt);
+    console.log(evt.key);
+    console.log(event.target.value.splice(-1));
 
     //for backspace
     if (charCode == 8) {
