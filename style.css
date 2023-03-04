@@ -18,7 +18,7 @@ input {
     pointer-events: none;
 }
 
-#in-1 {
+.in1 {
     pointer-events: all;
 }
 

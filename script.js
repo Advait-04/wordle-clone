@@ -61,6 +61,7 @@ document.onkeydown = (evt) => {
 
     if (charCode == 13 || charCode == 229) {
         console.log(charCode);
+        console.log("hello");
 
         const currentElement = document.activeElement;
         const currentParent = document.activeElement.parentElement;
