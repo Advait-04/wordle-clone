@@ -1,6 +1,8 @@
 var currentElement;
 var siblingElement;
 
+const controlDiv = document.querySelector(".control-div");
+
 const wordleWords = JSON.parse(localStorage.getItem("wordleWords"));
 
 const currentWord =
@@ -57,7 +59,7 @@ document.onkeydown = (evt) => {
         }
     }
 
-    if (charCode == 13) {
+    if (charCode == 13 || charCode == 229) {
         const currentElement = document.activeElement;
         const currentParent = document.activeElement.parentElement;
         const currentChilds = currentParent.children;
@@ -187,6 +189,8 @@ function evaluateLine(parent) {
 }
 
 function gameEnd(result) {
+    controlDiv.focus();
+
     const msg = result ? "Well Done!!!" : "Better luck next time :)";
 
     const endSection = `
@@ -201,6 +205,8 @@ function gameEnd(result) {
         "end-sec d-flex flex-row gap-3 justify-content-center align-items-center mt-3";
 
     if (!document.querySelector(".end-sec")) {
+        const title = document.querySelector(".title-text");
+        title.textContent = `The word was "${currentWord}"`;
         section.innerHTML = endSection;
     }
 

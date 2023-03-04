@@ -35,3 +35,8 @@ input:focus {
         height: 3.5rem;
     }
 }
+
+.control-div {
+    width: 0px;
+    height: 0px;
+}
