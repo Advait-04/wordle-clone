@@ -37,18 +37,16 @@ function limitInput(ele) {
 }
 
 document.onkeydown = game;
-document.onsubmit = game;
 
 function game(evt) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
 
-    console.log(evt.key);
-    console.log(event.target.value.splice(-1));
+    console.log(evt);
 
     //for backspace
-    if (charCode == 8) {
+    if (charCode === 8) {
         const currentElement = document.activeElement;
         if ((currentElement.nodeName = "input")) {
             currentElement.value = "";
@@ -65,9 +63,7 @@ function game(evt) {
         }
     }
 
-    if (charCode == 13 || charCode == "") {
-        console.log("h1");
-
+    if (charCode === 13 || charCode === "") {
         const currentElement = document.activeElement;
         const currentParent = document.activeElement.parentElement;
         const currentChilds = currentParent.children;
