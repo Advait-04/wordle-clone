@@ -41,7 +41,7 @@ document.onkeydown = (evt) => {
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
 
-    console.log(charCode);
+    console.log(evt);
 
     //for backspace
     if (charCode == 8) {
