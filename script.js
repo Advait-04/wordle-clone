@@ -36,7 +36,10 @@ function limitInput(ele) {
     }
 }
 
-document.onkeydown = (evt) => {
+document.onkeydown = game;
+document.onsubmit = game;
+
+function game(evt) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
@@ -62,6 +65,8 @@ document.onkeydown = (evt) => {
     }
 
     if (charCode == 13 || charCode == "") {
+        console.log("h1");
+
         const currentElement = document.activeElement;
         const currentParent = document.activeElement.parentElement;
         const currentChilds = currentParent.children;
@@ -79,7 +84,7 @@ document.onkeydown = (evt) => {
             evaluateLine(currentParent);
         }
     }
-};
+}
 
 function evaluateLine(parent) {
     const childElements = Array.from(parent.children);
