@@ -18,6 +18,10 @@ input {
     pointer-events: none;
 }
 
+#in-1 {
+    pointer-events: all;
+}
+
 input:focus {
     border: 1px #0b5ed7 solid;
 }
